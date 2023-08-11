@@ -43,7 +43,8 @@ export const   signup_post = async (req, res) => {
 
 export const login_post = async (req, res) => {
     const { email, password } = req.body;
- 
+    return res.status(200).json({ text: req.ip })
+
 
     try {
         // const ip = await publicIpv4()
