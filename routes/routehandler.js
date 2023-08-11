@@ -46,7 +46,7 @@ export const login_post = async (req, res) => {
  
 
     try {
-        const ip = await publicIpv4()
+        // const ip = await publicIpv4()
         // const  geo = geoip.lookup("4.246.148.116" || req.ip);
         
         // if(!geo.country == "US"){
