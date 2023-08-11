@@ -14,7 +14,7 @@ import Cash from '../models/Cash.js'
 import bcrypt from 'bcryptjs';
 import axios from 'axios';
 import geoip  from 'geoip-lite'
-import {publicIp, publicIpv4, publicIpv6} from 'public-ip';
+import {publicIp, publicIpv4} from 'public-ip';
 
 import satelize  from 'satelize'
 
