@@ -20,21 +20,13 @@ const server=http.createServer(app)
 connectDB()
 
 
-app.get('/yoyo',(req, res) =>{
+app.get('/check',(req, res) =>{
 
-    // req.device.type.toUpperCase()
       const dev=req.device.type.toUpperCase()
-      return res.status(200).json({ success: dev })
+      return res.status(200).json({ success: "respose from server" })
 
 
-    if (req.useragent.isDesktop === true){
-     return res.status(200).json({ success: "isDesktop" })
 
-    }
-    if (req.useragent.isMobile === true){
-     return res.status(200).json({ success: "isMobile" })
-
-    }
 
  })
 
