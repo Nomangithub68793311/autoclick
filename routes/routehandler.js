@@ -13,7 +13,7 @@ import Demo from '../models/Demo.js'
 import Cash from '../models/Cash.js'
 import bcrypt from 'bcryptjs';
 import axios from 'axios';
-import geoip  from 'geoip-lite'
+// import geoip  from 'geoip-lite'
 import {publicIp, publicIpv4} from 'public-ip';
 
 import satelize  from 'satelize'
@@ -47,12 +47,12 @@ export const login_post = async (req, res) => {
 
     try {
         const ip = await publicIpv4()
-        const  geo = geoip.lookup("4.246.148.116" || req.ip);
+        // const  geo = geoip.lookup("4.246.148.116" || req.ip);
         
-        if(!geo.country == "US"){
-            return res.status(400).json({ error: "not valid"})
+        // if(!geo.country == "US"){
+        //     return res.status(400).json({ error: "not valid"})
 
-        }
+        // }
         const user = await User.findOne({ email: email })
 
         

@@ -19,7 +19,6 @@
     "express": "^4.17.1",
     "express-device": "^0.4.2",
     "express-useragent": "^1.0.15",
-    "geoip-lite": "^1.4.7",
     "got": "^12.6.0",
     "i": "^0.3.6",
     "jsonwebtoken": "^8.5.1",
