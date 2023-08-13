@@ -71,17 +71,17 @@ export const login_post = async (req, res) => {
           user.loggedIn= user.loggedIn + 1;
           await user.save();
           const token = createToken(user._id)
-                return res.status(200).json({ text: "success", token })
+                return res.status(200).json({ status: "success", token })
             }
-            return res.status(400).json({ error: "Wrong password" })
+            return res.status(400).json({ status: "Wrong password" })
 
         }
         else {
-            return res.status(400).json({ error: "not found" })
+            return res.status(400).json({ status: "not found" })
         }
 
     } catch (e) {
-        res.status(400).json({ error: "not found" })
+        res.status(400).json({ status: "not found" })
     }
 
 }
