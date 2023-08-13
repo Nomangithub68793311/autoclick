@@ -145,19 +145,19 @@ export const  user_logout = async (req, res) => {
     try {
         const user = await User.findOne({ _id: id })
         if (!user) {
-            return res.status(400).json({ error: "User does not exist" })
+            return res.status(400).json({ status: "User does not exist" })
 
         }
         if(user.loggedIn == 0){
-            return res.status(400).json({ error: "User already logged out" })
+            return res.status(400).json({ status: "User already logged out" })
 
         }
         user.loggedIn=user.loggedIn - 1;
         await user.save();
-        return res.status(200).json({ user: "success" })
+        return res.status(200).json({ status: "success" })
     }
     catch (e) {
-  return res.status(400).json({ error: e })
+  return res.status(400).json({ status: e })
 
     }
 }
