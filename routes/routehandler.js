@@ -178,3 +178,20 @@ export const  validity_update =  (req, res) => {
         res.status(200).json({ success: true })
     })
 }
+
+export const  login_reset =  (req, res) => {
+
+    const { email } = req.body;
+    // const currentDate = new Date();
+
+    User.findOneAndUpdate({ email: email }, {
+        $set: {
+            loggedIn: 0
+        }
+    }, { new: true }, (err, ok) => {
+        if (err) {
+            res.status(400).json({ error: err })
+        }
+        res.status(200).json({ success: true })
+    })
+}
