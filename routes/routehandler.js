@@ -65,7 +65,7 @@ export const login_post = async (req, res) => {
             if(difff >= 30){
                 return res.status(400).json({ error: "Subscription Expired" })
             }
-          if (user.loggedIn >= 2){
+          if (user.loggedIn >= 10){
             return res.status(400).json({ error: "more than one user" })
           }
           user.loggedIn= user.loggedIn + 1;
